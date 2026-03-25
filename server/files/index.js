@@ -1,3 +1,5 @@
+// stypesheet for index.htmp
+
 window.onload = function () {
   const xhr = new XMLHttpRequest();
   xhr.onload = function () {

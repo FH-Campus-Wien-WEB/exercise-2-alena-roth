@@ -1,3 +1,5 @@
+// holds JS code for edit.html
+
 function setMovie(movie) {
   for (const element of document.forms[0].elements) {
     const name = element.id;

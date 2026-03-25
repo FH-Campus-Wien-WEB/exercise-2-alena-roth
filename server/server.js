@@ -1,21 +1,26 @@
+// contains startup code + endpoints
+
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const movieModel = require('./movie-model.js');
 
+console.log(Object.keys(movieModel));
+
 const app = express();
 
 // Parse urlencoded bodies
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
 // Serve static content in directory 'files'
 app.use(express.static(path.join(__dirname, 'files')));
 
 // Configure a 'get' endpoint for all movies..
 app.get('/movies', function (req, res) {
-  /* Task 1.2. Remove the line below and eturn the movies from 
-     the model as an array */
-  res.sendStatus(404)
+  /* Task 1.2. Remove the line below and return the movies from the model as an array */
+  res.json(Object.values(movieModel));
+  // console.log(Object.values(object));
+  // res.sendStatus(404)
 })
 
 // Configure a 'get' endpoint for a specific movie

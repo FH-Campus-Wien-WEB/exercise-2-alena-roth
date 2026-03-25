@@ -112,3 +112,13 @@ ul {
   color: rgb(236, 222, 222);
   margin-left: 5%;
 }
+
+button {
+  margin: 5px;
+  background-color: green;
+  color: violet;
+}
+
+.contributors {
+  height: 280px;
+}

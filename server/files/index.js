@@ -53,46 +53,61 @@ window.onload = function () {
         });
         article.appendChild(LSgenres);
 
+        const contributors = document.createElement("div");
+        contributors.classList.add("contributors");
+
         const directors = document.createElement("h2");
-        directors.textContent = "Director: " //+ movie.Directors;
-        article.appendChild(directors);
+        directors.textContent = "Director:";
+        contributors.appendChild(directors);
 
         const LSdirectors = document.createElement("ul");
-        // String to array:
         movie.Directors.forEach(director => {
           const li = document.createElement("li");
           li.textContent = director;
           LSdirectors.appendChild(li);
         });
-        article.appendChild(LSdirectors);
+        contributors.appendChild(LSdirectors);
 
         const writers = document.createElement("h2");
-        writers.textContent = "Writer(s): " // + movie.Writers;
-        article.appendChild(writers);
+        writers.textContent = "Writer(s):";
+        contributors.appendChild(writers);
 
-        const LSwriters = document.createElement("ul"); // "unordered list"
-        // String to array:
+        const LSwriters = document.createElement("ul");
         movie.Writers.forEach(writer => {
           const li = document.createElement("li");
           li.textContent = writer;
           LSwriters.appendChild(li);
-          console.log(movie.Writers);
         });
-        article.appendChild(LSwriters);
+        contributors.appendChild(LSwriters);
 
         const actors = document.createElement("h2");
-        actors.textContent = "Voice actor(s): " //+ movie.Actors;
-        article.appendChild(actors);
+        actors.textContent = "Voice actor(s):";
+        contributors.appendChild(actors);
 
-        const LSactors = document.createElement("ul"); // "unordered list"
-        // String to array:
+        const LSactors = document.createElement("ul");
         movie.Actors.forEach(actor => {
           const li = document.createElement("li");
           li.textContent = actor;
           LSactors.appendChild(li);
-          console.log(movie.Actors);
         });
-        article.appendChild(LSactors);
+        contributors.appendChild(LSactors);
+
+        article.appendChild(contributors);
+
+        const id = movie.imdbID;
+
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.id = movie.imdbID;
+
+        editButton.id = movie.imdbID;
+
+        // click handler -- copied from developer.mozilla.org -- not sure if this will be the way to go
+        editButton.onclick = function () {
+          // put logic here later?
+        };
+
+        article.appendChild(editButton);
 
         bodyElement.appendChild(article);
 

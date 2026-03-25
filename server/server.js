@@ -4,6 +4,8 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const movieModel = require('./movie-model.js');
+// was missing; caused crashes when summoning any "movies"-data
+const movies = require("./movie-model")
 
 console.log(Object.keys(movieModel));
 
@@ -27,7 +29,16 @@ app.get('/movies', function (req, res) {
 app.get('/movies/:imdbID', function (req, res) {
   /* Task 2.1. Remove the line below and add the 
     functionality here */
-  res.sendStatus(404)
+
+  const movie = movies[req.params.imdbID];
+  // if movie not found: return 404; e.g. with --> res.sendStatus(404)
+  // check after implementation: http://localhost:3000/movies/<someExistingImdbID> --> JSON if existing, error if not
+
+  if (movie) {
+    res.json(movie);
+  } else {
+    res.sendStatus(404);
+  }
 })
 
 /* Task 3.1 and 3.2.

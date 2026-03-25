@@ -20,7 +20,7 @@ article {
   border-radius: 30px;
   padding: 20px;
   box-shadow: 3px 3px 3px 3px rgb(110, 96, 103);
-  margin: 20px;
+  margin: 0px 20px 20px 20px;
   width: auto;
   max-width: 500px;
 }
@@ -84,7 +84,7 @@ img {
   padding: 15px;
   font-size: 16px;
   margin: 20px 10px 20px 10px;
-  height: 90px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,11 +114,12 @@ ul {
 }
 
 button {
-  margin: 5px;
+  margin-bottom: 5px;
   background-color: green;
   color: violet;
 }
 
 .contributors {
-  height: 280px;
+  height: 270px;
+  overflow: hidden;
 }

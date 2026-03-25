@@ -28,10 +28,6 @@ window.onload = function () {
         meta.textContent = movie.Runtime + "min • " + movie.Released;
         article.appendChild(meta);
 
-        const ratingMetascore = document.createElement("h2");
-
-        const imdbRating = document.createElement("h2");
-
         const ratings = document.createElement("p");
         ratings.classList.add("meta");
         ratings.textContent = movie.imdbRating + " IMDb • " + movie.Metascore + " Metascore";
@@ -93,6 +89,9 @@ window.onload = function () {
         contributors.appendChild(LSactors);
 
         article.appendChild(contributors);
+
+
+        // 1.3
 
         const id = movie.imdbID;
 

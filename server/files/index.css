@@ -1,41 +1,114 @@
 @import url(base.css);
 
-h1 {
-  font-size: 200%;
-  margin: 8px 0px;
-}
+/* 
+copied in everything from between style-tags from Ex1 
+*/
 
-img {
-  border-radius: 12px;
+body {
+  background: rgb(230, 190, 190);
+  font-family: Arial;
+  letter-spacing: 0.3px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
 }
 
 article {
-  background-color: lightgray;
-  border-radius: 16px;
-  padding: 16px;
-  margin: 2vw;
+  background-color: rgb(104, 53, 63);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 3px 3px 3px 3px rgb(110, 96, 103);
+  margin: 20px;
+  width: auto;
+  max-width: 500px;
 }
 
-span {
-  margin-right: 4px;
+article:hover {
+  background: rgb(99, 34, 47);
+  box-shadow: 8px 8px 8px 8px rgb(71, 59, 65);
 }
 
-.genre {
-  padding: 4px 8px;
-  border: solid black 1px;
-  border-radius: 6px;
-  background-color: darkgray;
-  font-weight: bold;
+h1 {
+  text-align: center;
+  color: rgb(85, 28, 37);
+  background-color: lightgoldenrodyellow;
+  max-width: 100%;
+  border-radius: 40px;
 }
 
-input {
-  width: 100%;
+img {
+  height: 400px;
+  border-radius: 20px;
+  border: 3px;
+  border-style: dashed;
+  border-color: lightgoldenrodyellow;
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 2px;
 }
 
-select {
-  width: 100%;
+.meta {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(216, 201, 206)
 }
 
-textarea {
-  width: 100%;
+.genre-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+
+.genre-list li {
+  background-color: rgb(177, 143, 156);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(216, 201, 206);
+  padding: 10px;
+  color: rgb(65, 13, 29);
+}
+
+.card {
+  background-color: rgb(238, 233, 213);
+  color: rgb(65, 13, 29);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(216, 201, 206);
+  padding: 15px;
+  font-size: 16px;
+  margin: 20px 10px 20px 10px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 16px;
+  color: whitesmoke;
+  margin-left: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(88, 9, 9);
+  background-color: rgb(234, 235, 213);
+  width: auto;
+}
+
+ul {
+  font-size: 16px;
+  color: rgb(236, 222, 222);
+  margin-left: 5%;
 }

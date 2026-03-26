@@ -92,21 +92,22 @@ window.onload = function () {
 
 
         // 1.3
-
         const id = movie.imdbID;
+
+        const buttonContainer = document.createElement("div");
+        buttonContainer.classList.add("buttonContainer");
+        article.appendChild(buttonContainer);
 
         const editButton = document.createElement("button");
         editButton.textContent = "Edit";
         editButton.id = movie.imdbID;
 
-        editButton.id = movie.imdbID;
-
-        // click handler -- copied from developer.mozilla.org -- not sure if this will be the way to go
+        // 2.2 - functionality editButton
         editButton.onclick = function () {
-          // put logic here later?
+          location.href = "edit.html?imdbID=" + movie.imdbID;
         };
 
-        article.appendChild(editButton);
+        buttonContainer.appendChild(editButton);
 
         bodyElement.appendChild(article);
 

@@ -9,3 +9,37 @@ textarea {
 div {
   margin: 4px 0px;
 }
+
+body {
+  background-color: lavender;
+  font-size: 18px;
+}
+
+article {
+  background: rgb(226, 166, 208);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 3px 3px 3px 3px rgb(214, 81, 148);
+  margin: 30px;
+  width: auto;
+  max-width: 700px;
+}
+
+button {
+  background-color: white;
+  color: purple;
+  display: flex;
+  font-size: 16px;
+  border-radius: 30px;
+  border-color: purple;
+  padding: 15px;
+}
+
+.buttonContainer {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
+}

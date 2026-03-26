@@ -114,12 +114,21 @@ ul {
 }
 
 button {
-  margin-bottom: 5px;
-  background-color: green;
-  color: violet;
+  background-color: rgb(240, 240, 232);
+  color: rgb(65, 13, 29);
+  border-radius: 30px;
+  padding: 15px;
 }
 
 .contributors {
   height: 270px;
   overflow: hidden;
+}
+
+.buttonContainer {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }

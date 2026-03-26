@@ -17,6 +17,8 @@ function setMovie(movie) {
   }
 }
 
+
+
 function getMovie() {
   const movie = {};
 
@@ -79,6 +81,16 @@ function putMovie() {
   };
 }
 
+// 2.2
+window.onload = function () {
+  const cancel = document.getElementById("cancel");
+  cancel.onclick = function () {
+    window.location.href = "index.html";
+  };
+}
+
+
+
 /** Loading and setting the movie data for the movie with the passed imdbID */
 const imdbID = new URLSearchParams(window.location.search).get("imdbID");
 
@@ -90,9 +102,9 @@ xhr.onload = function () {
   } else {
     alert(
       "Loading of movie data failed. Status was " +
-        xhr.status +
-        " - " +
-        xhr.statusText,
+      xhr.status +
+      " - " +
+      xhr.statusText,
     );
   }
 };

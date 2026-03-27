@@ -89,6 +89,14 @@ window.onload = function () {
   };
 }
 
+// 2.3 save button in edit form -- not working yet, breaks cancel button
+
+/*
+window.onload = function () {
+  const save = getElementById("save");
+  save.onclick = putMovie();
+  };
+*/
 
 
 /** Loading and setting the movie data for the movie with the passed imdbID */

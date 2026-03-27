@@ -13,15 +13,13 @@ window.onload = function () {
 
         const article = document.createElement("article");
 
-        const h1 = document.createElement("h1");
-        h1.textContent = movie.Title;
-        article.appendChild(h1);
+        const movieTitle = document.createElement("h1");
+        movieTitle.textContent = movie.Title;
+        article.appendChild(movieTitle);
 
         const poster = document.createElement("img");
         poster.src = movie.Poster;
         article.appendChild(poster);
-
-        const released = document.createElement("h2");
 
         const meta = document.createElement("p");
         meta.classList.add("meta");

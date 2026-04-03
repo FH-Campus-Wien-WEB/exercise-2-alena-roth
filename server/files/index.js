@@ -88,7 +88,6 @@ window.onload = function () {
 
         article.appendChild(contributors);
 
-
         // 1.3
         const id = movie.imdbID;
 

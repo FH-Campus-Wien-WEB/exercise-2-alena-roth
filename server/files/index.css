@@ -46,8 +46,6 @@ img {
   border-color: lightgoldenrodyellow;
   display: block;
   margin: auto;
-  margin-bottom: 15px;
-  padding: 2px;
 }
 
 .meta {
@@ -63,6 +61,7 @@ img {
   justify-content: center;
   gap: 20px;
   padding: 0px;
+  /* if removed, genres shift -- why? */
   margin-bottom: 30px;
 }
 
@@ -70,21 +69,31 @@ img {
   background-color: rgb(177, 143, 156);
   border-radius: 10px;
   border-style: solid;
+  border-width: 2px;
   border-color: rgb(216, 201, 206);
   padding: 10px;
   color: rgb(65, 13, 29);
+}
+
+.genre-list li::before {
+  content: "";
+  /* removes dots from li */
+}
+
+li::before {
+  /* puts content at beginning of li */
+  content: "🤍 "
 }
 
 .card {
   background-color: rgb(238, 233, 213);
   color: rgb(65, 13, 29);
   border-radius: 10px;
-  border-style: solid;
-  border-color: rgb(216, 201, 206);
+
   padding: 15px;
   font-size: 16px;
   margin: 20px 10px 20px 10px;
-  height: 80px;
+  min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,6 +120,7 @@ ul {
   font-size: 16px;
   color: rgb(236, 222, 222);
   margin-left: 5%;
+  list-style: none;
 }
 
 button {
@@ -121,7 +131,7 @@ button {
 }
 
 .contributors {
-  height: 270px;
+  min-height: 330px;
   overflow: hidden;
 }
 
